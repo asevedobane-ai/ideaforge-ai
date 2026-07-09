@@ -19,7 +19,7 @@ async function generate(type) {
 
     try {
 
-        const response = await fetch("YOUR_RENDER_URL/generate", {
+        const response = await fetch("https://ideaforge-ai-f5da.onrender.com/generate", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
