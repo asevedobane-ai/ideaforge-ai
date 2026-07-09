@@ -1,0 +1,135 @@
+/* IdeaForge AI Website Styling */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b0b16;
+    color: white;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #17172b, #24245a);
+}
+
+header h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #cccccc;
+    font-size: 18px;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px;
+    background: #111122;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #8b7cff;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h2 {
+    font-size: 40px;
+}
+
+.hero p {
+    color: #bbbbbb;
+}
+
+/* Buttons */
+button {
+    background: #6c5ce7;
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: #8b7cff;
+}
+
+/* Tool Cards */
+.tools {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 30px;
+}
+
+.card {
+    background: #18182b;
+    width: 280px;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.card h3 {
+    font-size: 22px;
+}
+
+.card p {
+    color: #bbbbbb;
+}
+
+/* Results */
+#result {
+    margin: 40px auto;
+    max-width: 700px;
+    padding: 30px;
+    background: #18182b;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* Mobile Support */
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 35px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
