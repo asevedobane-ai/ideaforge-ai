@@ -1,45 +1,48 @@
-// IdeaForge AI Script
-
-function start() {
-    alert("Welcome to IdeaForge AI! 🚀");
+function start(){
+    alert("Welcome to IdeaForge AI 🚀");
 }
 
-function generate(type) {
+
+function generate(type){
 
     let result = "";
 
-    if (type === "game") {
-        let ideas = [
-            "A survival game where players explore a mysterious abandoned city.",
-            "A multiplayer horror game where players escape a changing maze.",
-            "A futuristic battle game with customizable robots."
+
+    if(type === "game"){
+        let games = [
+            "A survival game on a planet that changes every night.",
+            "A multiplayer mystery game inside an abandoned city.",
+            "A racing game where players build custom vehicles."
         ];
 
-        result = ideas[Math.floor(Math.random() * ideas.length)];
+        result = games[Math.floor(Math.random()*games.length)];
     }
 
-    if (type === "business") {
+
+    if(type === "business"){
         let names = [
             "NovaLabs",
             "PixelForge",
-            "BrightHive",
             "FutureFlow",
-            "VisionWorks"
+            "BrightCore"
         ];
 
-        result = "Business name idea: " + names[Math.floor(Math.random() * names.length)];
+        result = names[Math.floor(Math.random()*names.length)];
     }
 
-    if (type === "writing") {
+
+    if(type === "writing"){
         let stories = [
-            "A hero discovers a hidden world beneath their hometown.",
-            "A scientist creates an invention that changes the future.",
-            "A mysterious message arrives from an unknown place."
+            "A hero discovers a hidden world under their city.",
+            "A robot learns what it means to be human.",
+            "A forgotten invention changes the future."
         ];
 
-        result = stories[Math.floor(Math.random() * stories.length)];
+        result = stories[Math.floor(Math.random()*stories.length)];
     }
+
 
     document.getElementById("result").innerHTML =
-        "<h3>✨ AI Result</h3><p>" + result + "</p>";
+    "<h2>✨ AI Result</h2><p>" + result + "</p>";
+
 }
