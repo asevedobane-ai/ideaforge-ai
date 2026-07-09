@@ -7,10 +7,67 @@
 
 <body>
 
-<!-- The website content goes here -->
-<h1>🤖 IdeaForge AI</h1>
+<header>
+    <h1>🤖 IdeaForge AI</h1>
+    <p>Create ideas, names, and concepts faster with AI.</p>
+</header>
 
-</body>
+<nav>
+    <a href="#">Home</a>
+    <a href="#tools">Tools</a>
+    <a href="#about">About</a>
+</nav>
+
+<section class="hero">
+    <h2>Your AI Creativity Assistant</h2>
+    <p>Generate game ideas, business names, and writing inspiration.</p>
+    <button onclick="start()">Start Creating</button>
+</section>
+
+
+<section id="tools" class="tools">
+
+    <div class="card">
+        <h3>🎮 Game Idea Generator</h3>
+        <p>Create unique game concepts.</p>
+        <button onclick="generate('game')">Generate</button>
+    </div>
+
+    <div class="card">
+        <h3>💡 Business Name Generator</h3>
+        <p>Find names for your next project.</p>
+        <button onclick="generate('business')">Generate</button>
+    </div>
+
+    <div class="card">
+        <h3>✍️ Writing Generator</h3>
+        <p>Create story ideas and concepts.</p>
+        <button onclick="generate('writing')">Generate</button>
+    </div>
+
+</section>
+
+
+<section id="result">
+    <h2>Result</h2>
+    <p>Your generated idea will appear here.</p>
+</section>
+
+
+<section id="about">
+    <h2>About IdeaForge AI</h2>
+    <p>
+        IdeaForge AI helps creators turn simple thoughts into creative ideas.
+    </p>
+</section>
+
+
+<footer>
+    <p>© 2026 IdeaForge AI</p>
+</footer>
+
 
 <script src="script.js"></script>
+
+</body>
 </html>
