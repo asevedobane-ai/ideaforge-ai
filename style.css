@@ -7,32 +7,22 @@ body {
     font-family: Arial, sans-serif;
     background: #0b0b16;
     color: white;
-    overflow-x: hidden;
 }
 
-/* Header */
 header {
     text-align: center;
-    padding: 35px 15px;
-    background: linear-gradient(135deg, #17172b, #24245a);
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #6c5ce7, #341f97);
 }
 
 header h1 {
-    font-size: clamp(28px, 8vw, 45px);
-    margin: 0;
+    font-size: 45px;
 }
 
-header p {
-    font-size: clamp(14px, 4vw, 18px);
-    color: #cccccc;
-}
-
-/* Navigation */
 nav {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
+    gap: 20px;
     padding: 15px;
     background: #111122;
 }
@@ -40,80 +30,79 @@ nav {
 nav a {
     color: white;
     text-decoration: none;
-    padding: 8px 12px;
 }
 
-/* Hero */
 .hero {
     text-align: center;
-    padding: 40px 20px;
+    padding: 50px 20px;
 }
 
-.hero h2 {
-    font-size: clamp(25px, 7vw, 40px);
-}
-
-.hero p {
-    color: #bbbbbb;
-}
-
-/* Buttons */
 button {
-    width: auto;
-    min-height: 45px;
-    padding: 12px 25px;
-    border-radius: 30px;
-    border: none;
     background: #6c5ce7;
     color: white;
-    font-size: 16px;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 25px;
     cursor: pointer;
+    font-size: 16px;
 }
 
-/* Tool Cards */
+button:hover {
+    background: #8b7cff;
+}
+
 .tools {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
 }
 
 .card {
     background: #18182b;
+    width: 280px;
     padding: 25px;
     border-radius: 20px;
     text-align: center;
 }
 
-/* Result Box */
 #result {
-    margin: 25px 15px;
-    padding: 25px;
+    margin: 30px;
+    padding: 30px;
     background: #18182b;
     border-radius: 20px;
     text-align: center;
 }
 
-/* Phone Optimization */
-@media (max-width: 600px) {
+#about {
+    text-align: center;
+    padding: 40px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111122;
+}
+
+
+@media(max-width:600px){
+
+    header h1 {
+        font-size: 32px;
+    }
 
     nav {
         flex-direction: column;
         align-items: center;
     }
 
-    nav a {
-        width: 100%;
-        text-align: center;
+    .card {
+        width: 90%;
     }
 
     button {
         width: 90%;
-        max-width: 300px;
     }
-
-    .card {
-        width: 100%;
-    }
-
 }
