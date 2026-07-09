@@ -1,48 +1,43 @@
-function start(){
-    alert("Welcome to IdeaForge AI 🚀");
-}
+async function generate(type) {
 
+    let prompt = "";
 
-function generate(type){
-
-    let result = "";
-
-
-    if(type === "game"){
-        let games = [
-            "A survival game on a planet that changes every night.",
-            "A multiplayer mystery game inside an abandoned city.",
-            "A racing game where players build custom vehicles."
-        ];
-
-        result = games[Math.floor(Math.random()*games.length)];
+    if (type === "game") {
+        prompt = "Create a unique video game idea with a name, gameplay, and features.";
     }
 
-
-    if(type === "business"){
-        let names = [
-            "NovaLabs",
-            "PixelForge",
-            "FutureFlow",
-            "BrightCore"
-        ];
-
-        result = names[Math.floor(Math.random()*names.length)];
+    if (type === "business") {
+        prompt = "Create a unique business idea with a name and description.";
     }
 
-
-    if(type === "writing"){
-        let stories = [
-            "A hero discovers a hidden world under their city.",
-            "A robot learns what it means to be human.",
-            "A forgotten invention changes the future."
-        ];
-
-        result = stories[Math.floor(Math.random()*stories.length)];
+    if (type === "writing") {
+        prompt = "Create an original story idea with a title and plot.";
     }
-
 
     document.getElementById("result").innerHTML =
-    "<h2>✨ AI Result</h2><p>" + result + "</p>";
+    "<h2>🤖 Thinking...</h2>";
 
+    try {
+
+        const response = await fetch("YOUR_RENDER_URL/generate", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                prompt: prompt
+            })
+        });
+
+        const data = await response.json();
+
+        document.getElementById("result").innerHTML =
+        "<h2>✨ AI Result</h2><p>" + data.answer + "</p>";
+
+    } catch (error) {
+
+        document.getElementById("result").innerHTML =
+        "❌ AI connection failed";
+
+    }
 }
